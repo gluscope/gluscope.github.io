@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GLUScope</title>
+  <style>
+    body {font-family: Arial, sans-serif; padding: 2rem;}
+    .dropdown {margin-bottom: 1rem;}
+    label {display:block; margin-bottom:.3rem;}
+    select {padding:.4rem; font-size:1rem;}
+    .hidden {display:none;}
+  </style>
+</head>
+<body>
+
+  <h1>GLUScope</h1>
+
+  <div class="dropdown" id="modelDiv">
+    <label for="modelSelect">Choose your model</label>
+    <select id="modelSelect">
+      <option disabled selected>Loading…</option>
+    </select>
+  </div>
+
+  <div class="dropdown hidden" id="layerDiv">
+    <label for="layerSelect">Choose your layer</label>
+    <select id="layerSelect">
+      <option disabled selected>Select a model first</option>
+    </select>
+  </div>
+
+  <div class="dropdown hidden" id="neuronDiv">
+    <label for="neuronSelect">Choose your neuron</label>
+    <select id="neuronSelect">
+      <option disabled selected>Select a layer first</option>
+    </select>
+  </div>
+
+  <script>
+    /* --------------------------------------------------------------
+       2️⃣  Helper to create <option> elements
+       -------------------------------------------------------------- */
+    function makeOption(text, value) {
+      const opt = document.createElement('option');
+      opt.textContent = text;
+      opt.value = value;
+      return opt;
+    }
+    async function initSelectors() {
+        /* --------------------------------------------------------------
+        1️⃣  Data model – you can move this to a separate pages.json file
+        -------------------------------------------------------------- */
+        const response = await fetch('pages.json');
+        if (!response.ok) throw new Error('Network error: ' + response.status);
+        const hierarchy = await response.json();   // <-- now hierarchy is the array
+
+        /* --------------------------------------------------------------
+        3️⃣  Populate the first dropdown (models)
+        -------------------------------------------------------------- */
+        const modelSel   = document.getElementById('modelSelect');
+        const layerDiv   = document.getElementById('layerDiv');
+        const layerSel   = document.getElementById('layerSelect');
+        const neuronDiv       = document.getElementById('neuronDiv');
+        const neuronSel       = document.getElementById('neuronSelect');
+
+        // Fill models
+        modelSel.innerHTML = '<option disabled selected>Select a model…</option>';
+        hierarchy.forEach((ch, idx) => {
+        modelSel.appendChild(makeOption(ch.title, idx)); // store index as value
+        });
+
+        /* --------------------------------------------------------------
+        4️⃣  React to model selection → fill layers
+        -------------------------------------------------------------- */
+        modelSel.addEventListener('change', function () {
+        const chIdx = Number(this.value);
+        const layers = hierarchy[chIdx].children || [];
+
+        // Reset downstream selects
+        neuronDiv.classList.add('hidden');
+        neuronSel.innerHTML = '<option disabled selected>Select a layer first</option>';
+
+        // Populate layers
+        layerSel.innerHTML = '<option disabled selected>Select a layer…</option>';
+        layers.forEach((sec, sIdx) => {
+            // Encode both model and layer indices so we can retrieve later
+            const val = `${chIdx}|${sIdx}`;
+            layerSel.appendChild(makeOption(sec.title, val));
+        });
+
+        // Show the layer dropdown
+        layerDiv.classList.remove('hidden');
+        });
+
+        /* --------------------------------------------------------------
+        5️⃣  React to layer selection → fill neurons
+        -------------------------------------------------------------- */
+        layerSel.addEventListener('change', function () {
+        const [chIdx, secIdx] = this.value.split('|').map(Number);
+        const neurons = hierarchy[chIdx].children[secIdx].children || [];
+
+        neuronSel.innerHTML = '<option disabled selected>Select a neuron…</option>';
+        neurons.forEach(neuron => {
+            neuronSel.appendChild(makeOption(neuron.title, neuron.url));
+        });
+
+        neuronDiv.classList.remove('hidden');
+        });
+
+        /* --------------------------------------------------------------
+        6️⃣  Final navigation when a neuron is chosen
+        -------------------------------------------------------------- */
+        neuronSel.addEventListener('change', function () {
+        const target = this.value;
+        if (target) {
+            // You could also open in a new tab: window.open(target, '_blank');
+            window.location.href = target;
+        }
+        });
+    }
+    // Run after the document is ready
+        if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initSelectors);
+        } else {
+        initSelectors();
+        }
+</script>
+</body>
+</html>

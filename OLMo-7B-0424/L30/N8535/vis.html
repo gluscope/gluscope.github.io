@@ -1,0 +1,1411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- -------------------------------------------------------
+      1️⃣  Document metadata
+       ------------------------------------------ -->
+  <meta charset="UTF-8">
+  <title>GLUscope</title>
+
+  <!-- --------------------------------------------------------------
+      2️⃣  Minimal styling – just enough to give each viz a place
+       ---------------------------------------- -->
+  <style>
+    /* Every visualisation gets its own box.
+       The height prevents the page from collapsing before the viz loads. */
+    /* Applied while we’re waiting for the data */
+    .circuit-viz.loading {
+      min-height: 300px;          /* reserve space */
+    }
+  </style>
+</head>
+
+<body>
+<h1>Model: <b>allenai/OLMo-7B-0424-hf</b></h1>
+<h2>Layer: <b>30</b>. Neuron Index: <b>8535</b></h2>
+<table><tr>
+<td><h4>gate+_in+</h4></td>
+<td><h4>gate+_in-</h4></td>
+<td><h4>gate-_in+</h4></td>
+<td><h4>gate-_in-</h4></td>
+</tr><tr>
+<td>Frequency: <b>9.27%</b>.</td>
+<td>Frequency: <b>2.76%</b>.</td>
+<td>Frequency: <b>77.36%</b>.</td>
+<td>Frequency: <b>10.60%</b>.</td>
+</tr>
+<tr>
+<td>
+            <b>hook_post</b>:<br>
+            Max: <b>16.19</b>;<br>
+            Min: <b>0.00</b>;<br>
+            Avg: <b>0.16</b>.
+            </td>
+            
+<td>
+            <b>hook_post</b>:<br>
+            Max: <b>0.00</b>;<br>
+            Min: <b>-23.00</b>;<br>
+            Avg: <b>-0.22</b>.
+            </td>
+            
+<td>
+            <b>hook_post</b>:<br>
+            Max: <b>0.00</b>;<br>
+            Min: <b>-1.34</b>;<br>
+            Avg: <b>-0.13</b>.
+            </td>
+            
+<td>
+            <b>hook_post</b>:<br>
+            Max: <b>0.57</b>;<br>
+            Min: <b>0.00</b>;<br>
+            Avg: <b>0.05</b>.
+            </td>
+            
+</tr>
+<tr>
+<td>
+            <b>hook_pre_linear</b>:<br>
+            Max: <b>4.77</b>;<br>
+            Min: <b>0.00</b>;<br>
+            Avg: <b>0.64</b>.
+            </td>
+            
+<td>
+            <b>hook_pre_linear</b>:<br>
+            Max: <b>0.00</b>;<br>
+            Min: <b>-3.36</b>;<br>
+            Avg: <b>-0.42</b>.
+            </td>
+            
+<td>
+            <b>hook_pre_linear</b>:<br>
+            Max: <b>4.88</b>;<br>
+            Min: <b>0.00</b>;<br>
+            Avg: <b>0.62</b>.
+            </td>
+            
+<td>
+            <b>hook_pre_linear</b>:<br>
+            Max: <b>0.00</b>;<br>
+            Min: <b>-2.52</b>;<br>
+            Avg: <b>-0.25</b>.
+            </td>
+            
+</tr>
+<tr>
+<td>
+            <b>hook_pre</b>:<br>
+            Max: <b>6.99</b>;<br>
+            Min: <b>0.00</b>;<br>
+            Avg: <b>0.37</b>.
+            </td>
+            
+<td>
+            <b>hook_pre</b>:<br>
+            Max: <b>7.79</b>;<br>
+            Min: <b>0.00</b>;<br>
+            Avg: <b>0.55</b>.
+            </td>
+            
+<td>
+            <b>hook_pre</b>:<br>
+            Max: <b>0.00</b>;<br>
+            Min: <b>-5.06</b>;<br>
+            Avg: <b>-0.91</b>.
+            </td>
+            
+<td>
+            <b>hook_pre</b>:<br>
+            Max: <b>0.00</b>;<br>
+            Min: <b>-4.69</b>;<br>
+            Avg: <b>-0.83</b>.
+            </td>
+            
+</tr>
+<tr>
+<td>
+            <b>swish</b>:<br>
+            Max: <b>6.98</b>;<br>
+            Min: <b>0.00</b>;<br>
+            Avg: <b>0.25</b>.
+            </td>
+            
+<td>
+            <b>swish</b>:<br>
+            Max: <b>7.79</b>;<br>
+            Min: <b>0.00</b>;<br>
+            Avg: <b>0.40</b>.
+            </td>
+            
+<td>
+            <b>swish</b>:<br>
+            Max: <b>0.00</b>;<br>
+            Min: <b>-0.28</b>;<br>
+            Avg: <b>-0.22</b>.
+            </td>
+            
+<td>
+            <b>swish</b>:<br>
+            Max: <b>0.00</b>;<br>
+            Min: <b>-0.28</b>;<br>
+            Avg: <b>-0.21</b>.
+            </td>
+            
+</tr>
+</table>
+<details>
+<summary><h2>Prototypical activations for case gate+_in+</h2></summary>
+<details>
+<summary><h3>Extreme hook_post activations</h3></summary>
+<details>
+            <summary><h4>Example 0</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in+_hook_post_example_0.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 1</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in+_hook_post_example_1.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 2</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in+_hook_post_example_2.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 3</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in+_hook_post_example_3.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 4</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in+_hook_post_example_4.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 5</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in+_hook_post_example_5.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 6</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in+_hook_post_example_6.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 7</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in+_hook_post_example_7.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 8</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in+_hook_post_example_8.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 9</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in+_hook_post_example_9.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 10</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in+_hook_post_example_10.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 11</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in+_hook_post_example_11.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 12</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in+_hook_post_example_12.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 13</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in+_hook_post_example_13.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 14</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in+_hook_post_example_14.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 15</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in+_hook_post_example_15.json">
+            </div>
+        </details>
+</details>
+<hr>
+<details>
+<summary><h3>Extreme hook_pre_linear activations</h3></summary>
+<details>
+            <summary><h4>Example 0</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in+_hook_pre_linear_example_0.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 1</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in+_hook_pre_linear_example_1.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 2</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in+_hook_pre_linear_example_2.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 3</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in+_hook_pre_linear_example_3.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 4</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in+_hook_pre_linear_example_4.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 5</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in+_hook_pre_linear_example_5.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 6</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in+_hook_pre_linear_example_6.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 7</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in+_hook_pre_linear_example_7.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 8</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in+_hook_pre_linear_example_8.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 9</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in+_hook_pre_linear_example_9.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 10</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in+_hook_pre_linear_example_10.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 11</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in+_hook_pre_linear_example_11.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 12</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in+_hook_pre_linear_example_12.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 13</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in+_hook_pre_linear_example_13.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 14</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in+_hook_pre_linear_example_14.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 15</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in+_hook_pre_linear_example_15.json">
+            </div>
+        </details>
+</details>
+<hr>
+<details>
+<summary><h3>Extreme hook_pre activations</h3></summary>
+<details>
+            <summary><h4>Example 0</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in+_hook_pre_example_0.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 1</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in+_hook_pre_example_1.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 2</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in+_hook_pre_example_2.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 3</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in+_hook_pre_example_3.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 4</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in+_hook_pre_example_4.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 5</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in+_hook_pre_example_5.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 6</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in+_hook_pre_example_6.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 7</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in+_hook_pre_example_7.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 8</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in+_hook_pre_example_8.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 9</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in+_hook_pre_example_9.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 10</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in+_hook_pre_example_10.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 11</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in+_hook_pre_example_11.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 12</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in+_hook_pre_example_12.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 13</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in+_hook_pre_example_13.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 14</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in+_hook_pre_example_14.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 15</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in+_hook_pre_example_15.json">
+            </div>
+        </details>
+</details>
+<hr>
+</details>
+<hr>
+</details>
+<hr>
+<details>
+<summary><h2>Prototypical activations for case gate+_in-</h2></summary>
+<details>
+<summary><h3>Extreme hook_post activations</h3></summary>
+<details>
+            <summary><h4>Example 0</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in-_hook_post_example_0.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 1</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in-_hook_post_example_1.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 2</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in-_hook_post_example_2.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 3</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in-_hook_post_example_3.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 4</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in-_hook_post_example_4.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 5</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in-_hook_post_example_5.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 6</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in-_hook_post_example_6.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 7</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in-_hook_post_example_7.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 8</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in-_hook_post_example_8.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 9</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in-_hook_post_example_9.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 10</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in-_hook_post_example_10.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 11</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in-_hook_post_example_11.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 12</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in-_hook_post_example_12.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 13</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in-_hook_post_example_13.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 14</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in-_hook_post_example_14.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 15</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in-_hook_post_example_15.json">
+            </div>
+        </details>
+</details>
+<hr>
+<details>
+<summary><h3>Extreme hook_pre_linear activations</h3></summary>
+<details>
+            <summary><h4>Example 0</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in-_hook_pre_linear_example_0.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 1</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in-_hook_pre_linear_example_1.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 2</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in-_hook_pre_linear_example_2.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 3</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in-_hook_pre_linear_example_3.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 4</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in-_hook_pre_linear_example_4.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 5</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in-_hook_pre_linear_example_5.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 6</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in-_hook_pre_linear_example_6.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 7</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in-_hook_pre_linear_example_7.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 8</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in-_hook_pre_linear_example_8.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 9</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in-_hook_pre_linear_example_9.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 10</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in-_hook_pre_linear_example_10.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 11</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in-_hook_pre_linear_example_11.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 12</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in-_hook_pre_linear_example_12.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 13</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in-_hook_pre_linear_example_13.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 14</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in-_hook_pre_linear_example_14.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 15</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in-_hook_pre_linear_example_15.json">
+            </div>
+        </details>
+</details>
+<hr>
+<details>
+<summary><h3>Extreme hook_pre activations</h3></summary>
+<details>
+            <summary><h4>Example 0</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in-_hook_pre_example_0.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 1</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in-_hook_pre_example_1.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 2</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in-_hook_pre_example_2.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 3</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in-_hook_pre_example_3.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 4</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in-_hook_pre_example_4.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 5</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in-_hook_pre_example_5.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 6</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in-_hook_pre_example_6.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 7</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in-_hook_pre_example_7.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 8</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in-_hook_pre_example_8.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 9</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in-_hook_pre_example_9.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 10</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in-_hook_pre_example_10.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 11</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in-_hook_pre_example_11.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 12</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in-_hook_pre_example_12.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 13</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in-_hook_pre_example_13.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 14</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in-_hook_pre_example_14.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 15</h4></summary>
+            <div class="circuit-viz" data-url="./gate+_in-_hook_pre_example_15.json">
+            </div>
+        </details>
+</details>
+<hr>
+</details>
+<hr>
+</details>
+<hr>
+<details>
+<summary><h2>Prototypical activations for case gate-_in+</h2></summary>
+<details>
+<summary><h3>Extreme hook_post activations</h3></summary>
+<details>
+            <summary><h4>Example 0</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_hook_post_example_0.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 1</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_hook_post_example_1.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 2</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_hook_post_example_2.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 3</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_hook_post_example_3.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 4</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_hook_post_example_4.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 5</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_hook_post_example_5.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 6</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_hook_post_example_6.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 7</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_hook_post_example_7.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 8</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_hook_post_example_8.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 9</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_hook_post_example_9.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 10</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_hook_post_example_10.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 11</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_hook_post_example_11.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 12</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_hook_post_example_12.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 13</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_hook_post_example_13.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 14</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_hook_post_example_14.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 15</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_hook_post_example_15.json">
+            </div>
+        </details>
+</details>
+<hr>
+<details>
+<summary><h3>Extreme hook_pre_linear activations</h3></summary>
+<details>
+            <summary><h4>Example 0</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_hook_pre_linear_example_0.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 1</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_hook_pre_linear_example_1.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 2</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_hook_pre_linear_example_2.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 3</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_hook_pre_linear_example_3.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 4</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_hook_pre_linear_example_4.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 5</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_hook_pre_linear_example_5.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 6</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_hook_pre_linear_example_6.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 7</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_hook_pre_linear_example_7.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 8</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_hook_pre_linear_example_8.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 9</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_hook_pre_linear_example_9.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 10</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_hook_pre_linear_example_10.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 11</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_hook_pre_linear_example_11.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 12</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_hook_pre_linear_example_12.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 13</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_hook_pre_linear_example_13.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 14</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_hook_pre_linear_example_14.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 15</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_hook_pre_linear_example_15.json">
+            </div>
+        </details>
+</details>
+<hr>
+<details>
+<summary><h3>Extreme hook_pre activations</h3></summary>
+<details>
+            <summary><h4>Example 0</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_hook_pre_example_0.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 1</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_hook_pre_example_1.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 2</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_hook_pre_example_2.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 3</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_hook_pre_example_3.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 4</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_hook_pre_example_4.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 5</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_hook_pre_example_5.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 6</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_hook_pre_example_6.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 7</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_hook_pre_example_7.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 8</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_hook_pre_example_8.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 9</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_hook_pre_example_9.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 10</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_hook_pre_example_10.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 11</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_hook_pre_example_11.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 12</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_hook_pre_example_12.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 13</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_hook_pre_example_13.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 14</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_hook_pre_example_14.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 15</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_hook_pre_example_15.json">
+            </div>
+        </details>
+</details>
+<hr>
+<details>
+<summary><h3>Extreme swish activations</h3></summary>
+<details>
+            <summary><h4>Example 0</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_swish_example_0.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 1</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_swish_example_1.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 2</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_swish_example_2.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 3</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_swish_example_3.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 4</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_swish_example_4.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 5</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_swish_example_5.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 6</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_swish_example_6.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 7</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_swish_example_7.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 8</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_swish_example_8.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 9</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_swish_example_9.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 10</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_swish_example_10.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 11</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_swish_example_11.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 12</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_swish_example_12.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 13</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_swish_example_13.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 14</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_swish_example_14.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 15</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in+_swish_example_15.json">
+            </div>
+        </details>
+</details>
+<hr>
+</details>
+<hr>
+<details>
+<summary><h2>Prototypical activations for case gate-_in-</h2></summary>
+<details>
+<summary><h3>Extreme hook_post activations</h3></summary>
+<details>
+            <summary><h4>Example 0</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_hook_post_example_0.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 1</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_hook_post_example_1.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 2</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_hook_post_example_2.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 3</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_hook_post_example_3.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 4</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_hook_post_example_4.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 5</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_hook_post_example_5.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 6</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_hook_post_example_6.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 7</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_hook_post_example_7.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 8</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_hook_post_example_8.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 9</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_hook_post_example_9.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 10</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_hook_post_example_10.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 11</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_hook_post_example_11.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 12</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_hook_post_example_12.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 13</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_hook_post_example_13.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 14</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_hook_post_example_14.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 15</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_hook_post_example_15.json">
+            </div>
+        </details>
+</details>
+<hr>
+<details>
+<summary><h3>Extreme hook_pre_linear activations</h3></summary>
+<details>
+            <summary><h4>Example 0</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_hook_pre_linear_example_0.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 1</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_hook_pre_linear_example_1.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 2</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_hook_pre_linear_example_2.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 3</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_hook_pre_linear_example_3.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 4</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_hook_pre_linear_example_4.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 5</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_hook_pre_linear_example_5.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 6</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_hook_pre_linear_example_6.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 7</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_hook_pre_linear_example_7.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 8</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_hook_pre_linear_example_8.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 9</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_hook_pre_linear_example_9.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 10</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_hook_pre_linear_example_10.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 11</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_hook_pre_linear_example_11.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 12</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_hook_pre_linear_example_12.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 13</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_hook_pre_linear_example_13.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 14</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_hook_pre_linear_example_14.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 15</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_hook_pre_linear_example_15.json">
+            </div>
+        </details>
+</details>
+<hr>
+<details>
+<summary><h3>Extreme hook_pre activations</h3></summary>
+<details>
+            <summary><h4>Example 0</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_hook_pre_example_0.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 1</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_hook_pre_example_1.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 2</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_hook_pre_example_2.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 3</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_hook_pre_example_3.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 4</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_hook_pre_example_4.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 5</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_hook_pre_example_5.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 6</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_hook_pre_example_6.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 7</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_hook_pre_example_7.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 8</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_hook_pre_example_8.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 9</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_hook_pre_example_9.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 10</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_hook_pre_example_10.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 11</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_hook_pre_example_11.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 12</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_hook_pre_example_12.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 13</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_hook_pre_example_13.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 14</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_hook_pre_example_14.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 15</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_hook_pre_example_15.json">
+            </div>
+        </details>
+</details>
+<hr>
+<details>
+<summary><h3>Extreme swish activations</h3></summary>
+<details>
+            <summary><h4>Example 0</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_swish_example_0.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 1</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_swish_example_1.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 2</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_swish_example_2.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 3</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_swish_example_3.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 4</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_swish_example_4.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 5</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_swish_example_5.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 6</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_swish_example_6.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 7</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_swish_example_7.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 8</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_swish_example_8.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 9</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_swish_example_9.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 10</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_swish_example_10.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 11</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_swish_example_11.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 12</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_swish_example_12.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 13</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_swish_example_13.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 14</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_swish_example_14.json">
+            </div>
+        </details>
+<details>
+            <summary><h4>Example 15</h4></summary>
+            <div class="circuit-viz" data-url="./gate-_in-_swish_example_15.json">
+            </div>
+        </details>
+</details>
+<hr>
+</details>
+<hr><script type="module">
+    /* ---------------------------------------
+       4.1️⃣  Import the visualisation component **once**
+       ------------------------------------------------------------- */
+    import { render, ColoredTokensMulti } from
+      "https://unpkg.com/circuitsvis@1.43.3/dist/cdn/esm.js";
+
+    /* ---------------------------------------
+       4.2️⃣  Helper: fetch the JSON and call the renderer
+       ------------------------------------------------------------- */
+    async function loadAndRender(containerEl) {
+      containerEl.classList.add('loading');   // show placeholder height
+      fetch(containerEl.dataset.url)      // ① Grab the URL we stored in the data‑url attribute
+      .then(r => r.json())      // ② Fetch the JSON file (browser does gzip/Brotli automatically)
+      // → {tokens, values, labels}
+      .then(payload => {
+        // ③ Give the container a stable id (required by circuitsvis)
+        if (!containerEl.id) {
+          containerEl.id = "viz-" + Math.random().toString(36).slice(2);
+        }
+        // ④ Finally draw the heat‑map onto a <canvas>
+        //    CanvasTokensMulti is much faster than the default span‑based view.
+        render(containerEl.id, ColoredTokensMulti, payload);
+      })
+      .finally(() => containerEl.classList.remove('loading')); // remove placeholder
+    }
+
+    /* -----------------------------------------------------
+      4.3️⃣  Lazy‑load with IntersectionObserver
+       ---------------------------------------
+       • The observer watches each .circuit‑viz element.
+       • As soon as the element is within ~200 px of the viewport,
+         we start loading its data and rendering it.
+       • After we’ve started a viz we stop observing it (we only need it once).
+       -------------------------------------------- */
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {               // element entered view?
+            const el = entry.target;
+            observer.unobserve(el);                 // stop watching this one
+         loadAndRender(el);                   // kick off fetch + render
+          }
+        }
+      },
+      { rootMargin: "200px" }   // start loading a little *before* it appears
+    );
+
+    // ----------------------------------------
+   // 4.4️⃣  Hook the observer up to every placeholder on the page
+    // -----------------------------------------------------------
+    document.querySelectorAll('.circuit-viz').forEach((el) => {
+      observer.observe(el);
+    });
+
+  </script>
+
+</body>
+</html>
