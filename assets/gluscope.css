@@ -1,0 +1,508 @@
+/* ============================================================================
+   GLUScope -- shared stylesheet
+   ----------------------------------------------------------------------------
+   Visual language follows GitHub (Primer): system font stack, 14px base,
+   6px radii, #d1d9e0 hairline borders, subtle #f6f8fa fills, bordered "Box"
+   panels. The accent is gruvbox light's faded blue (#076678), swapped for
+   gruvbox bright blue (#83a598) in dark mode.
+
+   NOT themed here, deliberately: the activation heat-map token colours. Those
+   stay at the library's red/blue. They live in the vendored circuitsvis bundle
+   -- see tools/patch-circuitsvis.py, constants NEGATIVE_COLOR / POSITIVE_COLOR.
+   ========================================================================= */
+
+:root {
+  --gs-canvas:        #ffffff;
+  --gs-canvas-subtle: #f6f8fa;
+  --gs-canvas-inset:  #f6f8fa;
+  --gs-border:        #d1d9e0;
+  --gs-border-strong: #b7bfc7;
+  --gs-fg:            #1f2328;
+  --gs-fg-muted:      #59636e;
+  --gs-accent:        #076678;  /* gruvbox light, faded blue -- 6.6:1 on white */
+  --gs-accent-hover:  #054e5c;
+  --gs-accent-subtle: #e4eef1;
+  --gs-on-accent:     #ffffff;
+
+  --gs-font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
+             Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  --gs-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+             "Liberation Mono", monospace;
+  --gs-radius: 6px;
+  --gs-shadow: 0 1px 0 rgba(31, 35, 40, .04);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --gs-canvas:        #0d1117;
+    --gs-canvas-subtle: #151b23;
+    --gs-canvas-inset:  #010409;
+    --gs-border:        #3d444d;
+    --gs-border-strong: #545d68;
+    --gs-fg:            #f0f6fc;
+    --gs-fg-muted:      #9198a1;
+    --gs-accent:        #83a598;  /* gruvbox bright blue -- 7.0:1 on #0d1117 */
+    --gs-accent-hover:  #a3bfb4;
+    --gs-accent-subtle: #11211f;
+    --gs-on-accent:     #0d1117;
+    --gs-shadow: none;
+  }
+}
+
+/* ---------------------------------------------------------------- base ---- */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--gs-font);
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--gs-fg);
+  background: var(--gs-canvas);
+  -webkit-text-size-adjust: 100%;
+}
+
+a { color: var(--gs-accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+:focus-visible {
+  outline: 2px solid var(--gs-accent);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+.gs-container {
+  display: block;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 24px 16px 64px;
+}
+
+.gs-muted { color: var(--gs-fg-muted); }
+
+.gs-sr-only {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+
+/* -------------------------------------------------------------- header ---- */
+
+.gs-header {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: var(--gs-canvas-subtle);
+  border-bottom: 1px solid var(--gs-border);
+}
+
+.gs-header-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.gs-wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: var(--gs-fg);
+  white-space: nowrap;
+}
+.gs-wordmark:hover { color: var(--gs-accent); text-decoration: none; }
+
+.gs-mark {
+  width: 16px; height: 16px;
+  border-radius: 4px;
+  background: var(--gs-accent);
+  flex: none;
+}
+
+.gs-crumb-sep {
+  color: var(--gs-fg-muted);
+  user-select: none;
+}
+
+.gs-crumbs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  min-width: 0;
+}
+
+.gs-header-spacer { flex: 1 1 auto; }
+
+.gs-steps {
+  display: inline-flex;
+  gap: 4px;
+  flex: none;
+}
+
+/* ------------------------------------------------------- form controls ---- */
+
+.gs-select {
+  appearance: none;
+  -webkit-appearance: none;
+  font: inherit;
+  font-family: var(--gs-mono);
+  font-size: 12px;
+  color: var(--gs-fg);
+  background-color: var(--gs-canvas);
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath fill='%2359636e' d='M4.427 6.427a.75.75 0 0 1 1.06 0L8 8.94l2.513-2.513a.75.75 0 1 1 1.06 1.06L8.53 10.53a.75.75 0 0 1-1.06 0L4.427 7.487a.75.75 0 0 1 0-1.06Z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 6px center;
+  border: 1px solid var(--gs-border);
+  border-radius: var(--gs-radius);
+  box-shadow: var(--gs-shadow);
+  padding: 5px 26px 5px 10px;
+  max-width: 100%;
+  cursor: pointer;
+}
+.gs-select:hover:not(:disabled) { border-color: var(--gs-border-strong); background-color: var(--gs-canvas-subtle); }
+.gs-select:disabled { color: var(--gs-fg-muted); cursor: not-allowed; opacity: .7; }
+
+.gs-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font: inherit;
+  font-weight: 500;
+  color: var(--gs-fg);
+  background: var(--gs-canvas-subtle);
+  border: 1px solid var(--gs-border);
+  border-radius: var(--gs-radius);
+  box-shadow: var(--gs-shadow);
+  padding: 5px 12px;
+  cursor: pointer;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.gs-btn:hover:not(:disabled) { background: var(--gs-border); text-decoration: none; }
+.gs-btn:disabled,
+.gs-btn[aria-disabled="true"] { opacity: .5; cursor: not-allowed; pointer-events: none; }
+
+.gs-btn--primary {
+  color: var(--gs-on-accent);
+  background: var(--gs-accent);
+  border-color: transparent;
+}
+.gs-btn--primary:hover:not(:disabled) { background: var(--gs-accent-hover); }
+
+.gs-btn--icon { padding: 5px 9px; font-family: var(--gs-mono); }
+
+/* the chevron is baked into a data URI, so it needs its own dark-mode rule */
+@media (prefers-color-scheme: dark) {
+  .gs-select { background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath fill='%239198a1' d='M4.427 6.427a.75.75 0 0 1 1.06 0L8 8.94l2.513-2.513a.75.75 0 1 1 1.06 1.06L8.53 10.53a.75.75 0 0 1-1.06 0L4.427 7.487a.75.75 0 0 1 0-1.06Z'/%3E%3C/svg%3E"); }
+}
+
+/* ----------------------------------------------------------------- box ---- */
+
+.gs-box {
+  border: 1px solid var(--gs-border);
+  border-radius: var(--gs-radius);
+  background: var(--gs-canvas);
+}
+.gs-box-header {
+  padding: 12px 16px;
+  background: var(--gs-canvas-subtle);
+  border-bottom: 1px solid var(--gs-border);
+  border-radius: var(--gs-radius) var(--gs-radius) 0 0;
+  font-weight: 600;
+}
+.gs-box-body { padding: 16px; }
+
+/* =============================================== index (landing) page ===== */
+
+.gs-hero { margin-bottom: 24px; }
+.gs-hero h1 {
+  margin: 0 0 4px;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -.01em;
+}
+.gs-hero p { margin: 0; color: var(--gs-fg-muted); }
+
+.gs-picker { max-width: 640px; }
+
+.gs-field { margin-bottom: 16px; }
+.gs-field:last-child { margin-bottom: 0; }
+.gs-field label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: 13px;
+}
+.gs-field .gs-select { width: 100%; font-size: 14px; padding: 7px 28px 7px 12px; }
+.gs-field-hint { margin: 6px 0 0; font-size: 12px; color: var(--gs-fg-muted); }
+
+.gs-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--gs-border);
+}
+
+.gs-error {
+  margin: 0 0 16px;
+  padding: 12px 16px;
+  border: 1px solid #cf222e;
+  border-radius: var(--gs-radius);
+  background: rgba(207, 34, 46, .06);
+}
+
+/* ================================================== neuron (vis) page ===== */
+
+/* The page heading markup is generated upstream as
+   <h1>Model: <b>id</b></h1> and <h2>Layer: <b>n</b>. Neuron Index: <b>n</b></h2>.
+   Styled without touching that markup: the labels recede, the values carry. */
+.gs-neuron h1 {
+  margin: 0 0 2px;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--gs-fg-muted);
+  letter-spacing: -.01em;
+}
+.gs-neuron h1 b {
+  font-family: var(--gs-mono);
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--gs-fg);
+}
+.gs-neuron h2 {
+  margin: 0 0 20px;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--gs-fg-muted);
+}
+.gs-neuron h2 b {
+  font-family: var(--gs-mono);
+  font-weight: 600;
+  color: var(--gs-fg);
+}
+
+/* ------------------------------------------------- summary stats table ---- */
+
+.gs-neuron > .gs-container > table {
+  width: 100%;
+  margin: 0 0 24px;
+  border: 1px solid var(--gs-border);
+  border-radius: var(--gs-radius);
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  font-size: 12px;
+  table-layout: fixed;
+}
+.gs-neuron > .gs-container > table td {
+  padding: 8px 12px;
+  vertical-align: top;
+  border-bottom: 1px solid var(--gs-border);
+  border-right: 1px solid var(--gs-border);
+}
+.gs-neuron > .gs-container > table td:last-child { border-right: 0; }
+.gs-neuron > .gs-container > table tr:last-child td { border-bottom: 0; }
+
+/* first row = the four gate/input cases; make it read as a header */
+.gs-neuron > .gs-container > table tr:first-child td {
+  background: var(--gs-canvas-subtle);
+  border-bottom: 1px solid var(--gs-border-strong);
+}
+.gs-neuron > .gs-container > table h4 {
+  margin: 0;
+  font-family: var(--gs-mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--gs-accent);
+}
+/* second row = frequency; give it a touch of separation from the hook rows */
+.gs-neuron > .gs-container > table tr:nth-child(2) td {
+  border-bottom: 1px solid var(--gs-border-strong);
+}
+.gs-neuron > .gs-container > table b {
+  font-family: var(--gs-mono);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ------------------------------------------------ collapsible sections ---- */
+
+.gs-neuron details {
+  border: 1px solid var(--gs-border);
+  border-radius: var(--gs-radius);
+  background: var(--gs-canvas);
+  margin: 8px 0;
+}
+.gs-neuron details:first-of-type { margin-top: 0; }
+
+.gs-neuron summary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: var(--gs-radius);
+  list-style: none;
+  user-select: none;
+}
+.gs-neuron summary::-webkit-details-marker { display: none; }
+.gs-neuron summary::marker { content: ""; }
+
+/* chevron */
+.gs-neuron summary::before {
+  content: "";
+  flex: none;
+  width: 0; height: 0;
+  border-left: 5px solid var(--gs-fg-muted);
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  transition: transform .12s ease-in-out;
+}
+.gs-neuron details[open] > summary::before { transform: rotate(90deg); }
+.gs-neuron summary:hover { background: var(--gs-canvas-subtle); }
+.gs-neuron summary:hover::before { border-left-color: var(--gs-accent); }
+.gs-neuron details[open] > summary {
+  border-bottom: 1px solid var(--gs-border);
+  border-radius: var(--gs-radius) var(--gs-radius) 0 0;
+}
+
+/* headings live inside <summary> upstream; flatten them into the row */
+.gs-neuron summary h2,
+.gs-neuron summary h3,
+.gs-neuron summary h4 {
+  display: inline;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+.gs-neuron summary h3 { font-size: 13px; }
+.gs-neuron summary h4 { font-size: 13px; font-family: var(--gs-mono); font-weight: 500; }
+
+/* outermost level (the four cases) reads as a section header */
+.gs-neuron > .gs-container > details > summary {
+  background: var(--gs-canvas-subtle);
+  padding: 10px 14px;
+}
+.gs-neuron > .gs-container > details > summary h2 { font-size: 14px; }
+
+/* nested levels indent and lose their outer chrome */
+.gs-neuron details details {
+  margin: 8px 12px;
+}
+.gs-neuron details details:last-child { margin-bottom: 12px; }
+
+/* ------------------------------------------------------ the heat-maps ---- */
+
+.circuit-viz {
+  padding: 12px;
+  overflow-x: auto;
+}
+/* Reserve height so the page does not jump as lazily-loaded vizzes arrive.
+   (Carried over from the generator's inline <style>.) */
+.circuit-viz.loading {
+  min-height: 300px;
+  background: var(--gs-canvas-inset);
+  border-radius: var(--gs-radius);
+}
+
+/* channel selector -- see tools/patch-circuitsvis.py */
+.gs-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 10px;
+}
+.gs-chip {
+  font-family: var(--gs-mono);
+  font-size: 12px;
+  line-height: 1.5;
+  padding: 3px 10px;
+  color: var(--gs-fg-muted);
+  background: var(--gs-canvas);
+  border: 1px solid var(--gs-border);
+  border-radius: 999px;
+  cursor: pointer;
+}
+.gs-chip:hover { border-color: var(--gs-accent); color: var(--gs-fg); }
+.gs-chip--on {
+  color: var(--gs-on-accent);
+  background: var(--gs-accent);
+  border-color: transparent;
+}
+
+/* read-only negative/positive bounds -- replaces the old editable inputs */
+.gs-bounds {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: 11px;
+  color: var(--gs-fg-muted);
+}
+.gs-bound {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+}
+.gs-bound-label {
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  font-weight: 600;
+}
+.gs-bound-value {
+  font-family: var(--gs-mono);
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+  color: var(--gs-fg);
+}
+.gs-bound-ramp {
+  flex: none;
+  width: 96px;
+  height: 8px;
+  border: 1px solid var(--gs-border);
+  border-radius: 999px;
+}
+
+/* token stream */
+.colored-tokens {
+  font-family: var(--gs-mono);
+  font-size: 12px;
+}
+
+/* ------------------------------------------------------------ mobile ----- */
+
+@media (max-width: 600px) {
+  .gs-container { padding: 16px 16px 48px; }
+  .gs-header-inner { padding: 8px 16px; }
+  .gs-neuron h1 { font-size: 17px; }
+  .gs-neuron h1 b { font-size: 16px; }
+  .gs-neuron > .gs-container > table { table-layout: auto; font-size: 11px; }
+  .gs-neuron details details { margin: 8px 6px; }
+  .gs-actions { flex-direction: column; align-items: stretch; }
+}
+
+.gs-viz-error {
+  font-family: var(--gs-mono);
+  font-size: 12px;
+  color: #cf222e;
+  background: rgba(207, 34, 46, .06);
+  border-radius: var(--gs-radius);
+}
+
+/* The generator emits <hr> between sibling sections. The bordered cards now do
+   that job, so the rules become plain breathing room rather than visible lines. */
+.gs-neuron hr {
+  border: 0;
+  height: 0;
+  margin: 12px 0;
+}

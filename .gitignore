@@ -1,1 +1,3 @@
 test/
+tools/.circuitsvis-*.orig.js
+__pycache__/

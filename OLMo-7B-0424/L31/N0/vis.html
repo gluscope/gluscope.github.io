@@ -1,26 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- -------------------------------------------------------
-      1️⃣  Document metadata
-       ------------------------------------------ -->
   <meta charset="UTF-8">
-  <title>GLUscope</title>
-
-  <!-- --------------------------------------------------------------
-      2️⃣  Minimal styling – just enough to give each viz a place
-       ---------------------------------------- -->
-  <style>
-    /* Every visualisation gets its own box.
-       The height prevents the page from collapsing before the viz loads. */
-    /* Applied while we’re waiting for the data */
-    .circuit-viz.loading {
-      min-height: 300px;          /* reserve space */
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OLMo-7B-0424 · L31 · N0 · GLUScope</title>
+  <link rel="stylesheet" href="../../../assets/gluscope.css">
 </head>
-
-<body>
+<body class="gs-neuron">
+<div id="gs-nav"></div>
+<main class="gs-container">
+<noscript>This page needs JavaScript to draw the activation heat-maps and to
+build the navigation bar. The summary statistics below are static.</noscript>
 <h1>Model: <b>allenai/OLMo-7B-0424-hf</b></h1>
 <h2>Layer: <b>31</b>. Neuron Index: <b>0</b></h2>
 <table><tr>
@@ -1350,66 +1340,8 @@
 </details>
 <hr>
 </details>
-<hr><script type="module">
-    /* ---------------------------------------
-       4.1️⃣  Import the visualisation component **once**
-       ------------------------------------------------------------- */
-    import { render, ColoredTokensMulti, TopkTokens } from
-      "https://unpkg.com/circuitsvis@1.43.3/dist/cdn/esm.js";
-
-    /* ---------------------------------------
-       4.2️⃣  Helper: fetch the JSON and call the renderer
-       ------------------------------------------------------------- */
-    async function loadAndRender(containerEl) {
-      containerEl.classList.add('loading');   // show placeholder height
-      fetch(containerEl.dataset.url)      // ① Grab the URL we stored in the data‑url attribute
-      .then(r => r.json())      // ② Fetch the JSON file (browser does gzip/Brotli automatically)
-      // → {tokens, values, labels}
-      .then(payload => {
-        // ③ Give the container a stable id (required by circuitsvis)
-        if (!containerEl.id) {
-          containerEl.id = "viz-" + Math.random().toString(36).slice(2);
-        }
-        // ④ Finally draw the heat‑map
-        render(containerEl.id, ColoredTokensMulti, payload);
-        //if (containerEl.dataset.visType=="text") {
-        //  render(containerEl.id, ColoredTokensMulti, payload);
-        //} else if (containerEl.dataset.visType=="weight") {
-        //  render(containerEl.id, TopkTokens, payload)
-        //}
-      })
-      .finally(() => containerEl.classList.remove('loading')); // remove placeholder
-    }
-
-    /* -----------------------------------------------------
-      4.3️⃣  Lazy‑load with IntersectionObserver
-       ---------------------------------------
-       • The observer watches each .circuit‑viz element.
-       • As soon as the element is within ~200 px of the viewport,
-         we start loading its data and rendering it.
-       • After we’ve started a viz we stop observing it (we only need it once).
-       -------------------------------------------- */
-    const observer = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (entry.isIntersecting) {               // element entered view?
-            const el = entry.target;
-            observer.unobserve(el);                 // stop watching this one
-         loadAndRender(el);                   // kick off fetch + render
-          }
-        }
-      },
-      { rootMargin: "200px" }   // start loading a little *before* it appears
-    );
-
-    // ----------------------------------------
-   // 4.4️⃣  Hook the observer up to every placeholder on the page
-    // -----------------------------------------------------------
-    document.querySelectorAll('.circuit-viz').forEach((el) => {
-      observer.observe(el);
-    });
-
-  </script>
-
+</main>
+<script type="module" src="../../../assets/gluscope-nav.js"></script>
+<script type="module" src="../../../assets/gluscope-viz.js"></script>
 </body>
 </html>
